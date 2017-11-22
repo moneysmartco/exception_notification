@@ -230,6 +230,6 @@ class EmailNotifierTest < ActiveSupport::TestCase
     )
 
     mail = email_notifier.call(@exception, { accumulated_errors_count: 3 })
-    assert mail.subject.start_with?("[Dummy ERROR] (3 times) (ZeroDivisionError)")
+    assert mail.subject.start_with?("[Dummy ERROR] (3 times)  (ZeroDivisionError)")
   end
 end
